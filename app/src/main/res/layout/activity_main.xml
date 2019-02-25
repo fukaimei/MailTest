@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <EditText
+        android:id="@+id/sendAddEt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="发送方邮箱的地址" />
+
+    <EditText
+        android:id="@+id/mailAuthCode"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="发送方邮箱的授权码" />
+
+    <EditText
+        android:id="@+id/sendServer"
+        android:layout_width="match_parent"
+        android:text="smtp.qq.com"
+        android:layout_height="50dp"
+        android:hint="发送方的邮箱服务器" />
+
+    <EditText
+        android:id="@+id/sendPortNumber"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="587"
+        android:hint="发送方的邮箱端口号" />
+
+    <EditText
+        android:id="@+id/toAddEt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="接收方的邮箱地址" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:onClick="senTextMail"
+        android:text="点击发送文本邮件" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:onClick="sendFileMail"
+        android:text="点击发送带附件邮件" />
+
+</LinearLayout>
