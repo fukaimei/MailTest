@@ -23,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    public void senTextMail(View view) {
+
         sendAddEt = (EditText) findViewById(R.id.sendAddEt);
         mailAuthCode = (EditText) findViewById(R.id.mailAuthCode);
         sendServer = (EditText) findViewById(R.id.sendServer);
@@ -32,14 +36,22 @@ public class MainActivity extends AppCompatActivity {
         ShareUtils.putString(this, "FROM_PSW", mailAuthCode.getText().toString().trim());
         ShareUtils.putString(this, "HOST", sendServer.getText().toString().trim());
         ShareUtils.putString(this, "PORT", sendPortNumber.getText().toString().trim());
-    }
 
-    public void senTextMail(View view) {
         SendMailUtil.send(toAddEt.getText().toString());
         Toast.makeText(MainActivity.this, "邮件已发送", Toast.LENGTH_SHORT).show();
     }
 
     public void sendFileMail(View view) {
+
+        sendAddEt = (EditText) findViewById(R.id.sendAddEt);
+        mailAuthCode = (EditText) findViewById(R.id.mailAuthCode);
+        sendServer = (EditText) findViewById(R.id.sendServer);
+        sendPortNumber = (EditText) findViewById(R.id.sendPortNumber);
+        toAddEt = (EditText) findViewById(R.id.toAddEt);
+        ShareUtils.putString(this, "FROM_ADD", sendAddEt.getText().toString().trim());
+        ShareUtils.putString(this, "FROM_PSW", mailAuthCode.getText().toString().trim());
+        ShareUtils.putString(this, "HOST", sendServer.getText().toString().trim());
+        ShareUtils.putString(this, "PORT", sendPortNumber.getText().toString().trim());
 
         File file = new File("这里填写要添加附件的本地文件的路径地址");
         OutputStream os = null;

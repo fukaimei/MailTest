@@ -24,7 +24,6 @@
     <EditText
         android:id="@+id/sendServer"
         android:layout_width="match_parent"
-        android:text="smtp.qq.com"
         android:layout_height="50dp"
         android:hint="发送方的邮箱服务器" />
 
@@ -32,7 +31,6 @@
         android:id="@+id/sendPortNumber"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="587"
         android:hint="发送方的邮箱端口号" />
 
     <EditText
